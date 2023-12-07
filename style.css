@@ -1,0 +1,359 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+
+ul,li,a{
+    font-family: sans-serif;
+}
+#navbar{
+    display: flex;
+    position: sticky;
+    align-items: center;
+    top: 0px;
+    z-index: 1;
+    
+}
+
+#logo{
+    margin: 0px 5px ;
+    background: none;
+    
+}
+#logo img{
+    height: 60px;
+    width: 150px;
+    margin-left:20px ;
+    
+    border-radius: 60px;
+    
+}
+#logo img:hover{
+    filter: drop-shadow(0px 0px 1px goldenrod);
+    
+    
+    
+
+    transition: 0.5s;
+   
+    
+}
+
+
+#navbar ul{
+    display: flex;
+    margin-left: 20%;
+    position: relative;
+        
+}
+#navbar::before{
+    content: "";
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.6;
+    
+}
+
+
+#navbar ul li{
+    list-style: none;
+    display:inline-block;
+    
+    
+    
+}
+#navbar ul li a{
+    display: block;
+    position: relative;
+    text-decoration: none;
+    padding: 15px 20px;
+    color: white;
+    font-size: 16px;
+    margin: 10px 10px;
+    
+    opacity: 0.9;
+    
+    
+    
+}
+#navbar ul li a::after{
+    content: " ";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -1px;
+    background-color: goldenrod;
+    transition: 0.3s;
+}
+#navbar ul li a:hover:after{
+    width: 100%;
+}
+
+#navbar ul li a:hover{
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 2px goldenrod);
+    scroll-behavior: smooth;
+    
+    
+    
+}
+.order{
+    margin-left: 25%;
+    height: 40px;
+    color:rgb(0, 0, 0);
+    text-align: center;
+    width: 150px;
+    font-size: 20px;
+    background: white;
+    border-radius:50px ;
+    
+
+}
+.order a{
+    text-decoration: none;
+}
+.order:hover{
+    height: 43px;
+    width: 155px;
+    filter: drop-shadow(0px 0px 2px goldenrod);
+    transition: ease-in;
+
+}
+.search {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    
+}
+.search input{
+    height: 40px;
+    width: 600px;
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    padding-left: 40px;
+    border: 2px solid whitesmoke;
+}
+    
+
+.search input:hover{
+    
+    width: 650px;
+    filter: drop-shadow(0px 0px 2px goldenrod);
+    transition: ease-in .6s;
+    
+}
+#home{
+    display: inline-block;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    
+    
+}
+#home::before{
+    content: "";
+    background: url(foodbackground1.jpg) center center/cover;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.9;
+    
+
+}
+.p1{
+    
+    color: aliceblue;
+    
+
+
+}
+.p1::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    
+    height:20px ;
+    width:100%;
+    z-index: -1;
+    opacity: 0.4;
+    
+
+}
+.p1 marquee{
+    filter: drop-shadow(0px 0px 2px goldenrod);
+}
+.s1{
+    margin-left: 30%;
+}
+.wlcmtxt{
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    font-size: 50px;
+    font-family: sans-serif;
+    display: inline-block;
+    margin-left: 32%;
+    border-right: 4px solid goldenrod;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: 0.7s;
+    animation: wlcm 4s steps(20,end) infinite forwards ;
+}
+.f1{
+    color: goldenrod;
+    -webkit-text-stroke: 1px goldenrod;
+}
+@keyframes wlcm{
+    0%,100%{
+        width: 0;
+    }
+    70%,90%{
+        width: 34%;
+    }
+}
+.slider{
+    display: flex;
+    margin-top: 3%;
+    margin-left: 25%;
+    width: 50%;
+    height: 450px;
+    background-image: url("f1.jpg");
+    background-size: 100% 100%;
+    animation: changeimg 50s forwards infinite;
+    border: 5px solid white;
+    border-radius: 10px;
+    filter: drop-shadow(0px 0px 50px rgb(33, 33, 31));
+    
+}
+@keyframes changeimg{
+    0%,25%{
+        background-image: url("f1.jpg");
+    }
+    30%,50%{
+        background-image: url("f2.jpg");
+    }
+    55%,75%{
+        background-image: url("f3.jpg");
+    }
+    80%,100%{
+        background-image: url("f4.jpg");
+    }
+}
+
+.heading1{
+    display:block;
+    align-content: center;
+    font-family: sans-serif;
+    background-color: goldenrod;
+    color: white;
+    
+    font-size: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    
+}
+.servbox{
+    margin:34px;
+    display: flex;
+    
+}
+.box{
+    border: 2px solid goldenrod;
+    display: block;
+    margin: auto;
+    border-radius: 20px;
+}
+.box:hover{
+    box-shadow: 0px 0px 25px rgb(138, 99, 1);
+    transition: ease-in-out 0.6s;
+}
+
+.box img{
+    height: 300px;
+    width: 400px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    scale: 0.8;
+
+}
+.box:hover img{
+    scale: 0.97;
+    transition: 0.4s;
+}
+.foodname{
+    background-color: goldenrod;
+    text-align: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding:5px 0px 5px 0px ;
+}
+.menucontent{
+    background-color: bisque;
+    padding: 30px 10px 10px 30px;
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    grid-gap:2rem;
+}
+.box1{
+    border: 2px solid goldenrod;
+    display: block;
+    margin: auto;
+    padding: auto;
+    border-radius: 20px;
+}
+.box1:hover{
+    box-shadow: 0px 0px 25px rgb(138, 99, 1);
+    transition: ease-in-out 0.6s;
+}
+
+.box1 img{
+    height: 220px;
+    width: 270px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    scale: 0.8;
+}
+.box1:hover img{
+    scale: 0.97;
+    transition: 0.2s;
+}
+.foodname1{
+    background-color: goldenrod;
+    text-align: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding:5px 0px 5px 0px ;
+}
+
+.addbtn{
+    height: 40px;
+    width: 80px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 40px;
+    font-size: 20px;
+    border: none;
+    background-color: black;
+    color: goldenrod;
+}
+.addbtn:hover{
+    height: 44px;
+    width: 100px;
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
